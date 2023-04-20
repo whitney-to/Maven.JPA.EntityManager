@@ -1,0 +1,19 @@
+
+<persistence>
+    <!-- Define persistence unit -->
+    <persistence-unit name="my-persistence-unit">
+        <description>JpaForBeginners</description>
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+        <exclude-unlisted-classes>false</exclude-unlisted-classes>
+ 
+        <properties>
+            <!-- database connection -->
+            <property name="jakarta.persistence.jdbc.driver" value="org.postgresql.Driver" />
+            <property name="jakarta.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/jpaForBeginners" />
+            <property name="jakarta.persistence.jdbc.user" value="postgres" />
+            <property name="jakarta.persistence.jdbc.password" value="postgres" />
+                 
+            <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQL95Dialect"/>
+        </properties>
+    </persistence-unit>
+</persistence>
